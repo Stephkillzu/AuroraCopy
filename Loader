@@ -1,0 +1,62 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.269047618, 0, 0.328800976, 0)
+Frame.Size = UDim2.new(0, 582, 0, 319)
+
+UICorner.CornerRadius = UDim.new(0, 16)
+UICorner.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 85, 255))}
+UIGradient.Parent = Frame
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.296825409, 0, 0.363411605, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Fantasy
+TextLabel.Text = "Aurora"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 80.000
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.530952394, 0, 0.622991323, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Start"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 49.000
+
+UICorner_2.Parent = TextButton
+
+local LoadTick = tick()
+local Fill = Instance.new("Frame", Frame)
+Fill.AnchorPoint = Vector2.new(0, 1)
+Fill.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Fill.BorderSizePixel = 0
+Fill.Position = UDim2.new(0, 0, 1, 0)
+Fill.Size = UDim2.new(0, 0, 0, 6)
+Fill.ZIndex = 2
+
+TextButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+    game:GetService("Players").LocalPlayer:Kick("Not released yet discord.gg/FqrVKaHnaw")
+end)
